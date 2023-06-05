@@ -13,3 +13,8 @@
     border: none;
     color: white;
 }
+.user-name{
+    color: darkmagenta;
+    font-size: 30px;
+    text-align: center;
+}

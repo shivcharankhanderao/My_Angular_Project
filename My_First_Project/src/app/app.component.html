@@ -1,5 +1,6 @@
 <br><br>
-<h2>{{firstName}}</h2>
+<!-- <h2>{{firstName}}</h2> -->
+<h2 class="user-name">Welcome {{studentName}}</h2>
 <div class="container">
   <form>
     <h2>Login form</h2>
@@ -14,3 +15,20 @@
     <button class="sbmt-btn">Submit</button>
   </form>
 </div>
+
+<p>You have received amount --- {{amount}}</p>
+<p>{{isFavCity}}</p>
+<!-- Test case 1: can we use typeof operator into interpollation = no we can not use -->
+<!-- <p>{{typeof(isFavCity)}}</p> -->
+<!-- Test case 2: can we use arithmatic operator into interpollation = yes we can use -->
+<p>{{50+10}}</p>
+<!-- Test case 3: can we use method/function into interpollation = yes we can use -->
+<p>{{testingFunction(30,70)}}</p>
+<!-- test case 4: can we use assignment operator into interpollation = no we can not use
+= -- assignment operator(use to assign value) not possible
+== -- Equality operator(it will check only value equality) it possible
+=== --Equality operator(it will check value as well as datatype) it possible -->
+<!-- <p>{{isFavCity=false}}</p> -->
+<p>{{isFavCity==false}}</p>
+<p>{{isFavCity===false}}</p>
+<!-- <p>{{amount==='1000'}}</p> if datatype is differernt then it will through an error -->
