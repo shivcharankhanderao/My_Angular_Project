@@ -19,9 +19,25 @@ export class AppComponent {
   amount=1000;
   isFavCity=false;
 
+  myName='shivcharan';
+  gender=true;
+  isDisable=false;
+  eventBindingData=6000;
+
+  twowayBindingTest= 123456;
+
   testingFunction(x:number , y:number ){
 
     return x+y;
+  }
+
+  testingEventBinding(){
+    this.eventBindingData=5000;
+  }
+
+  test(){
+    console.log(this.twowayBindingTest);
+    
   }
 }
 
