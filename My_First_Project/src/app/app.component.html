@@ -33,31 +33,38 @@
 <!-- <p>{{isFavCity===false}}</p> -->
 <!-- <p>{{amount==='1000'}}</p> if datatype is differernt then it will through an error -->
 
-{{myName}}
-<br><br>
+<!-- {{myName}} -->
+<!-- <br><br>
 <input type="text" [value]="myName">
 <br><br>
 <input type="radio" [checked]="gender">
 <br><br>
 <input type="text" value="{{myName}}">
-<br><br>
+<br><br> -->
 <!-- <input type="text" disabled="{{isDisable}}"> we can not use interpollation majorlly -->
-<br><br>
-<input type="text" [disabled]="isDisable"><br><br>
+<!-- <br><br>
+<input type="text" [disabled]="isDisable"><br><br> -->
 
 <!-- EventBinding () (click), (focus), (blur) -->
-<button (click)="testingEventBinding()">click...</button>
-{{eventBindingData}}
-<br><br>
+<!-- <button (click)="testingEventBinding()">click...</button>
+{{eventBindingData}} -->
+<!-- <br><br> -->
 <!-- two way data binding -->
-<input type="text" [(ngModel)]="twowayBindingTest">
+<!-- <input type="text" [(ngModel)]="twowayBindingTest">
 <br><br>
 {{twowayBindingTest}}
 <br><br>
 <button (click)="test()">click to print</button>
-<br><br>
+<br><br> -->
 <!-- login component -->
-<app-login></app-login>
+<!-- <app-login></app-login> -->
 <!-- signup component -->
-<app-signup></app-signup>
+<!-- <app-signup></app-signup> -->
+<br><br>
+
+<!-- routerLink -->
+<a routerLink="/login">Login Component</a>
+<br><br>
+<!-- <a href="/login">Login comp....</a> application is getting refresh hence avoid to use -->
+<router-outlet></router-outlet>
 
