@@ -13,6 +13,7 @@ const routes: Routes = [
   {path :'admin', loadChildren:()=> import('./admin/admin.module').then(mod => mod.AdminModule)},
   {path : 'owner', loadChildren:()=> import('./owner/owner.module').then(m=> m.OwnerModule)},
   { path: 'student', loadChildren: () => import('./student/student.module').then(m => m.StudentModule) },
+  {path :'user', loadChildren:()=> import('./user/user.module').then(m=> m.UserModule)},
   {path : '**', component : PathNotFoundComponent}
 ];
 
