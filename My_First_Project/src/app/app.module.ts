@@ -8,6 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PathNotFoundComponent } from './path-not-found/path-not-found.component
     LoginComponent,
     SignupComponent,
     HomeComponent,
-    PathNotFoundComponent
+    PathNotFoundComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,

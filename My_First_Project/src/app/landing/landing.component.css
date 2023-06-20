@@ -1,0 +1,16 @@
+.parent{
+    height: 100vw;
+    width: 100%;
+    background-color: aquamarine;
+}
+.heading{
+    text-align: center;
+}
+.lgn-btn{
+    background: green;
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 15px;
+    border: none;
+    margin-left: 20px;
+}
