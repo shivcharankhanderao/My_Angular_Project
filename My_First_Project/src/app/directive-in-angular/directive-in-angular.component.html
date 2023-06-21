@@ -1,0 +1,26 @@
+<div>
+    <!-- in case true value of property compiler will ADD that element to DOM --> 
+    <h1 *ngIf="show1">i live  in mumbai</h1>
+
+    <!-- in case false value of property compiler will remove that element from DOM -->
+    <h1 *ngIf="show2">i live in pune</h1>
+
+    <!-- in case of undefined value of property it will consider it as a false -->
+    <h2 *ngIf="toshowpara1">test1</h2>
+
+    <!-- In case of condition compiler will show element if condition would true else it will remove from DOM if condition is false -->
+    <p *ngIf="toshowpara2 == 'shivcharan'">test2</p>
+
+    <!-- <h1 *ngIf="undefinedProperty = true">testtttt</h1> not possible -->
+
+    <!-- in case of property having NULL value compiler will consider it as a false hence it should remove from DOM -->
+    <h2 *ngIf="nullProperty">kkkkkkkk</h2>
+</div>
+
+<h1> Toggeling Effect </h1>
+<div class="div-container" *ngIf="toggel">
+
+</div>
+<br><br>
+
+<button (click)="toggelEffect()">Check</button>

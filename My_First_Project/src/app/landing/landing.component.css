@@ -1,12 +1,14 @@
-.parent{
+.parent {
     height: 100vw;
     width: 100%;
     background-color: aquamarine;
 }
-.heading{
+
+.heading {
     text-align: center;
 }
-.lgn-btn{
+
+.lgn-btn {
     background: green;
     text-align: center;
     padding: 5px 5px;

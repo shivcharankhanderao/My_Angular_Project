@@ -1,9 +1,10 @@
-.container{
+.container {
     height: 100vw;
     width: 100%;
-    background: violet;
+    background: azure;
 }
-.back-btn{
+
+.back-btn {
     background: blue;
     padding: 5px 5px;
     font-size: 15px;
@@ -11,25 +12,51 @@
     border: none;
     text-align: center;
 }
-.heading{
+
+.heading {
     text-align: center;
 }
-.form-container{
+
+.form-container {
     text-align: center;
     margin: auto;
     background-color: seagreen;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 400px;
     width: 300px;
     padding: 6px 6px;
 }
-.label{
+
+.label {
     font-size: 20px;
     padding: 5px;
     top: 4px;
     position: relative;
 }
-.inp-box{
+
+.inp-box {
     padding: 10px;
     margin-top: 5px;
+    width: 200px;
+}
+
+.pass {
+    font-size: 20px;
+    padding: 5px;
+    top: 10px;
+    position: relative;
+}
+
+.inp-pass {
+    padding: 10px;
+    margin-top: 10px;
+    width: 200px;
+}
+
+.lgn-btn {
+    padding: 5px;
+    background: brown;
+    margin-top: 22px;
+    font-size: 18px;
+    border: none;
 }

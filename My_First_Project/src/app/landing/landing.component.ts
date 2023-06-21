@@ -7,14 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
-  constructor(private router : Router){
+  constructor(private router: Router) {
 
   }
-  loginButton(){
+  loginButton() {
     this.router.navigateByUrl('/login');
   }
-  studentActivity(){
-    this.router.navigateByUrl('/student/studentActivity');
+  studentActivity() {
+    this.router.navigateByUrl('/user/userLogin');
+  }
+  directive(){
+    this.router.navigateByUrl('/directive');
   }
 
 }

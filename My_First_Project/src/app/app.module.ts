@@ -9,6 +9,7 @@ import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
 import { LandingComponent } from './landing/landing.component';
+import { DirectiveInAngularComponent } from './directive-in-angular/directive-in-angular.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LandingComponent } from './landing/landing.component';
     SignupComponent,
     HomeComponent,
     PathNotFoundComponent,
-    LandingComponent
+    LandingComponent,
+    DirectiveInAngularComponent
   ],
   imports: [
     BrowserModule,
