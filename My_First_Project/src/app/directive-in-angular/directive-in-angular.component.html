@@ -24,3 +24,40 @@
 <br><br>
 
 <button (click)="toggelEffect()">Check</button>
+
+<!-- ******* *ngFor ******** -->
+
+<ul *ngFor="let item of cars">
+    <li class="itm-container">{{item}}</li>
+</ul>
+
+<table class="table-container">
+    <tr>
+        <th *ngFor="let heading of tableHeading">{{heading}}</th>
+    </tr>
+    <tr *ngFor="let tableData of carDetails">
+        <td>{{tableData.carName}}</td>
+        <td>{{tableData.carPrice}}</td>
+        <td>{{tableData.color}}</td>
+    </tr>
+</table>
+
+<ul *ngFor="let data of data2">
+    <li>{{data}}</li>
+</ul>
+<ul *ngFor="let data of data3">
+    <li>{{data}}</li>
+</ul>
+
+<!-- Attribute directive -->
+<div class="container">
+    I like pune
+</div>
+
+<div [ngClass]="color == 'pink' ? 'container1' : 'container'">
+    I like pune
+</div>
+
+
+
+<br><br><br>
