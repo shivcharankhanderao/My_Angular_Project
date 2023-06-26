@@ -25,7 +25,7 @@
 
 <button (click)="toggelEffect()">Check</button>
 
-<!-- ******* *ngFor ******** -->
+<!-- ******* *ngFor [MIMP] ******** -->
 
 <ul *ngFor="let item of cars">
     <li class="itm-container">{{item}}</li>
@@ -49,14 +49,36 @@
     <li>{{data}}</li>
 </ul>
 
+<!-- ngSwitch -->
+<div [ngSwitch]="switchValue">
+
+    <h2 *ngSwitchCase="600">600 Value</h2>
+    <h2 *ngSwitchCase="300">300 value</h2>
+    <h2 *ngSwitchCase="100">100 value</h2>
+    <h2 *ngSwitchDefault>Default h2</h2>
+
+</div>
+
 <!-- Attribute directive -->
+
 <div class="container">
     I like pune
 </div>
-
+<!-- [ngClass] (MIMP) -->
 <div [ngClass]="color == 'pink' ? 'container1' : 'container'">
     I like pune
 </div>
+
+<!-- MIMP topic (mostly use)-->
+<h1 [class.container]="multiClasses == 100"
+[class.container1]="multiClasses == 200"
+[class.container2]="multiClasses == 300">
+hahahahaha2222222222222222222222222</h1>
+
+<p style="color: aqua; font-size: 30px;">paraparapara</p>
+<!-- [ngStyle] -->
+<p [ngStyle]="stylecss == 'yellow' ? {'color' : 'yellow'} : {'color' : 'red', 'font-size' : '30px'}">paraparaparapara</p>
+
 
 
 

@@ -32,6 +32,9 @@ export class DirectiveInAngularComponent {
   // let  xyz= []; // js / within function only
   // xyz =[]; property with empty array(interview que.)
   color ='pink';
+  stylecss = 'yellow1';
+  multiClasses = 300;
+  switchValue = 600;
 
   constructor(){
 

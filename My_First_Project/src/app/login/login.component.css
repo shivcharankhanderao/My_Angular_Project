@@ -1,7 +1,7 @@
 .container {
     height: 100vw;
     width: 100%;
-    background: azure;
+    background: salmon;
 }
 
 .back-btn {
@@ -20,7 +20,7 @@
 .form-container {
     text-align: center;
     margin: auto;
-    background-color: seagreen;
+    background-color: thistle;
     /* border: 1px solid black; */
     height: 400px;
     width: 300px;
@@ -55,8 +55,13 @@
 
 .lgn-btn {
     padding: 5px;
-    background: brown;
+    background: green;
     margin-top: 22px;
     font-size: 18px;
     border: none;
+}
+
+.span-err{
+    color: red;
+    font-size: 16px;
 }

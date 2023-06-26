@@ -1,12 +1,32 @@
 <div class="container">
-    <h1 class="heading">Login Form</h1>
+    <br>
     <button class="back-btn" routerLink="/landing">Back</button>
-    <form class="form-container">
-        <label class="label">User Name</label><br>
-        <input class="inp-box" type="text"><br>
+    <h1 class="heading">Login Form</h1>
+
+    <form #loginForm="ngForm" class="form-container">
+
+        <label class="label">Full Name</label><br>
+
+        <input class="inp-box" type="text" name="fullName" pattern="[a-zA-z]*$" ngModel #fullName="ngModel" required
+            minlength="5"><br>
+
+        <span class="span-err" *ngIf="fullName.errors?.['pattern'] && fullName.touched">Please Enter Alphabets
+            Only</span>
+        <span class="span-err" *ngIf="fullName.errors?.['minlength'] && !fullName.errors?.['pattern']">FullName should
+            be having atleast 5 Alphabets</span>
+
+        <br>
         <label class="pass">Password</label><br>
-        <input class="inp-pass" type="text"><br>
-        <button class="lgn-btn">Login</button><br>
+
+        <input class="inp-pass" type="text" ngModel name="password" #password="ngModel" minlength="8"
+            pattern="[A-Z]{1}[a-zA-Z0-9!@#$%^&*]{9}$"><br>
+
+        <span class="span-err" *ngIf="password.errors?.['minlength']">Password should contain atleast 8
+            charactors</span>
+        <span class="span-err" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength']">Please match the
+            pattern</span><br><br>
+
+        <button class="lgn-btn" [disabled]="!loginForm.valid" (click)="submit(loginForm.value)">Login</button><br>
         <!-- <a> Forgot password</a> -->
     </form>
 </div>
