@@ -11,9 +11,11 @@
             minlength="5"><br>
 
         <span class="span-err" *ngIf="fullName.errors?.['pattern'] && fullName.touched">Please Enter Alphabets
-            Only</span>
-        <span class="span-err" *ngIf="fullName.errors?.['minlength'] && !fullName.errors?.['pattern']">FullName should
-            be having atleast 5 Alphabets</span>
+            Only
+        </span>
+        <span class="span-err" *ngIf="fullName.errors?.['minlength'] && !fullName.errors?.['pattern']"> FullName
+            shouldbe having atleast 5 Alphabets
+        </span>
 
         <br>
         <label class="pass">Password</label><br>
@@ -23,9 +25,15 @@
 
         <span class="span-err" *ngIf="password.errors?.['minlength']">Password should contain atleast 8
             charactors</span>
-        <span class="span-err" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength']">Please match the
-            pattern</span><br><br>
+        <span class="span-err" *ngIf="password.errors?.['pattern'] && !password.errors?.['minlength']"> Please match the
+            pattern
+        </span><br><br>
 
+        <label> Gender </label><br>
+        <input type="radio" required value="Male" name="gender" ngModel #gender="ngModel"> Male
+        <input type="radio" required value="Female" name="gender" ngModel #gender="ngModel"> Female
+        <input type="radio" required value="Other" name="gender" ngModel #gender="ngModel"> Other <br>
+        <span class="span-err" *ngIf="gender.errors?.['required']">Gender is required</span> <br>
         <button class="lgn-btn" [disabled]="!loginForm.valid" (click)="submit(loginForm.value)">Login</button><br>
         <!-- <a> Forgot password</a> -->
     </form>
