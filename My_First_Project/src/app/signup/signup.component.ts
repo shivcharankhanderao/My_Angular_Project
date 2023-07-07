@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup,FormBuilder,Validator, Validators } from '@angular/forms';
+import { FormGroup,FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -20,12 +20,17 @@ export class SignupComponent {
   }
   signUpFormControlls(){
     this.signUpForm = this.formbuilder.group({
-      name : ['',[Validators.required,Validators.pattern("[a-zA-Z]*$"),Validators.minLength(10)]],
+      name : ['',[Validators.required,Validators.pattern("[a-zA-Z ]*$"),Validators.minLength(10)]],
+      mobNo : ['',[Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
       email : [],
-      contact : [],
       address : [],
       gender : ['male']
     })
+  }
+
+  submit(){
+    console.log(this.signUpForm.value);
+    
   }
 
 }

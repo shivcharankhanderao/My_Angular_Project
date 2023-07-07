@@ -4,21 +4,48 @@
 <form class="signup-form-container" [formGroup]="signUpForm">
     <label>Name</label><br>
     <input type="text" formControlName="name" placeholder="Enter your name"><br>
-    <span class="err" *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched">
-        Name is required</span>
+    <span *ngIf="!signUpForm.get('name')?.touched && !signUpForm.get('name')?.valid 
+        && !signUpForm.get('name')?.dirty">Hint: Enter your name here
+    </span>
+    <span class="err" *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched
+     && !signUpForm.get('name')?.valid ">
+        Name is required
+    </span>
         <span class="err" *ngIf="signUpForm.get('name')?.errors?.['pattern']">
-            Please enter valid name
-        </span><br>
+            Please enter Alphabets only
+        </span>
+        <span class="err" *ngIf="signUpForm.get('name')?.errors?.['minlength'] 
+        && !signUpForm.get('name')?.errors?.['pattern']">
+        Name must contain 10 Alphabets
+    </span><br>
+    <label>Mobile No.</label><br>
+    <input type="text" formControlName="mobNo"><br>
+    <span *ngIf="!signUpForm.get('mobNo')?.touched && !signUpForm.get('mobNo')?.dirty ">
+        Hint: Enter your mobile number
+    </span>
+    <span class="err" *ngIf="signUpForm.get('mobNo')?.touched 
+      && !signUpForm.get('mobNo')?.dirty ">
+     Please enter mobile number</span>
+    <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['pattern'] ">
+        Mobile number should be in integers
+    </span>
+    <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['minlength'] 
+    && !signUpForm.get('mobNo')?.errors?.['pattern'] ">
+        Please enter minimum 10 digits mobile number
+    </span>
+    <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['maxlength'] 
+    && !signUpForm.get('mobNo')?.errors?.['pattern'] ">
+        Please enter maximum 10 digits mobile number
+    </span><br>
 
     <label>Email</label><br>
     <input type="text" formControlName="email" placeholder="Enter your email"><br>
-    <label>Contact</label><br>
-    <input type="text" formControlName="contact"><br>
+    
     <label>Address</label><br>
     <input type="text" formControlName="address"><br>
     <label>Gender</label>
     <input type="radio" formControlName="gender" value="male">Male <br><br>
-    <button [disabled]="!signUpForm.valid">Submit</button>
+    <button [disabled]="!signUpForm.valid" (click)="submit()">Submit</button>
 
 </form>
 
