@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-user-login',
@@ -6,5 +7,54 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-login.component.css']
 })
 export class UserLoginComponent {
+  signInForm! : FormGroup;
+  showSignInForm : boolean = false;
+  passwordValue : any;
+  confirmPasswordValue : any
+  isMatch! : boolean;
+  
+
+  constructor(private fb : FormBuilder){}
+
+  showForm(){
+    // this.showSignInForm=true;
+    this.showSignInForm = ! this.showSignInForm
+    this.formDef();
+  }
+  formDef(){
+    this.signInForm=this.fb.group({
+      password : [],
+      confirmPassword : [],
+      name : ['',[this.nameValidation]]
+    })
+  }
+
+  nameValidation(inp:any){
+    console.log(inp.value);
+    let data =inp.value?.toLowerCase();
+    let isErr =data.includes('copy');
+    return isErr ? {Err : true} : null;
+    
+  }
+
+  password(){       
+    this.passwordValue=this.signInForm.value.password;
+    if (this.passwordValue == this.confirmPasswordValue) {
+      this.isMatch=true;
+    }
+    else{
+      this.isMatch=false;
+    }
+  }
+
+  confirmPassword(){
+    this.confirmPasswordValue=this.signInForm.value.confirmPassword;
+    if (this.passwordValue == this.confirmPasswordValue) {
+      this.isMatch=true;
+    }
+    else{
+      this.isMatch=false;
+    }
+  }
 
 }
