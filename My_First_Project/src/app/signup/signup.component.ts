@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormGroup,FormBuilder, Validators } from '@angular/forms';
+import { StoreDataService } from '../store-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -11,7 +13,8 @@ export class SignupComponent {
   // name : string : 'shiv';
   // name : string;
 
-  constructor( private formbuilder : FormBuilder){
+  constructor( private formbuilder : FormBuilder, private storeDataService : StoreDataService,
+    private router : Router){
 
   }
 
@@ -20,7 +23,7 @@ export class SignupComponent {
   }
   signUpFormControlls(){
     this.signUpForm = this.formbuilder.group({
-      name : ['',[Validators.required,Validators.pattern("[a-zA-Z ]*$"),Validators.minLength(10)]],
+      name : ['',[Validators.required,Validators.pattern("[a-zA-Z ]*$"),Validators.minLength(10),this.storeDataService.whiteSpaceValidator]],
       mobNo : ['',[Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)]],
       email : [],
       address : [],
@@ -30,6 +33,8 @@ export class SignupComponent {
 
   submit(){
     console.log(this.signUpForm.value);
+    this.storeDataService.userFullName= this.signUpForm.value.name
+    this.router.navigateByUrl('landing');
     
   }
 

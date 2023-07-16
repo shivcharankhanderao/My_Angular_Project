@@ -3,7 +3,8 @@
 
 <form [formGroup]="signInForm" *ngIf="showSignInForm">
     Password :
-    <input type="text" formControlName="password" (keyup)="password()"> <br>
+    <input [type]="showPassword ? 'text' : 'password'" formControlName="password" (keyup)="password()">
+    <button (click)="showpass()">show</button> <br>
     <span class="err" *ngIf="!isMatch && signInForm.get('password')?.dirty">
         Password and confirm password should be same
     </span><br>
@@ -16,4 +17,5 @@
     Name :
     <input type="text" formControlName="name"><br>
     <span class="err" *ngIf="signInForm.get('name')?.errors?.['Err']">Name should not contain copy word</span>
+    <span class="err" *ngIf="signInForm.get('name')?.errors?.['whiteSpace']">Name should not contain white space</span>
 </form>

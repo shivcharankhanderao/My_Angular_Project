@@ -1,5 +1,7 @@
 <div class="parent">
-    <h1 class="heading">My Application</h1>
+    <h1 class="heading" *ngIf="!fullName">My Application</h1>
+    <h1 class="heading" *ngIf="fullName">Welcome {{fullName}}</h1>
+
     <button class="lgn-btn" (click)="loginButton()">Login</button>
     <button class="lgn-btn" routerLink="/signup">Sign Up</button>
     <button class="lgn-btn" (click)="studentActivity()">User Activity</button>

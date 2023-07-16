@@ -4,19 +4,26 @@
     <form class="signup-form-container" [formGroup]="signUpForm">
         <label>Name</label><br>
         <input type="text" formControlName="name" placeholder="Enter your name"><br>
+
         <span *ngIf="!signUpForm.get('name')?.touched && !signUpForm.get('name')?.valid 
-        && !signUpForm.get('name')?.dirty">Hint: Enter your name here
+         && !signUpForm.get('name')?.dirty">Hint: Enter your name here
         </span>
-        <span class="err" *ngIf="signUpForm.get('name')?.errors?.['required'] && signUpForm.get('name')?.touched
-     && !signUpForm.get('name')?.valid ">
+        <span class="err" *ngIf="signUpForm.get('name')?.errors?.['required'] 
+         && signUpForm.get('name')?.touched
+         && !signUpForm.get('name')?.valid ">
             Name is required
         </span>
         <span class="err" *ngIf="signUpForm.get('name')?.errors?.['pattern']">
             Please enter Alphabets only
         </span>
         <span class="err" *ngIf="signUpForm.get('name')?.errors?.['minlength'] 
-                && !signUpForm.get('name')?.errors?.['pattern']">
+            && !signUpForm.get('name')?.errors?.['pattern']">
             Name must contain 10 Alphabets
+        </span>
+        <span class="err" *ngIf="signUpForm.get('name')?.errors?.['whiteSpace'] 
+         && !signUpForm.get('name')?.errors?.['minlength'] 
+         && !signUpForm.get('name')?.errors?.['pattern']">
+            Name should not contain white space
         </span><br>
 
         <label>Mobile No.</label><br>
@@ -31,11 +38,11 @@
             Mobile number should be in integers
         </span>
         <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['minlength'] 
-             && !signUpForm.get('mobNo')?.errors?.['pattern'] ">
+            && !signUpForm.get('mobNo')?.errors?.['pattern'] ">
             Please enter minimum 10 digits mobile number
         </span>
         <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['maxlength'] 
-             && !signUpForm.get('mobNo')?.errors?.['pattern'] ">
+            && !signUpForm.get('mobNo')?.errors?.['pattern'] ">
             Please enter maximum 10 digits mobile number
         </span><br>
 

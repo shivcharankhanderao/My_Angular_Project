@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { StoreDataService } from 'src/app/store-data.service';
 
 @Component({
   selector: 'app-user-login',
@@ -12,9 +13,10 @@ export class UserLoginComponent {
   passwordValue : any;
   confirmPasswordValue : any
   isMatch! : boolean;
+  showPassword! : boolean;
   
 
-  constructor(private fb : FormBuilder){}
+  constructor(private fb : FormBuilder, private storeDataService : StoreDataService){}
 
   showForm(){
     // this.showSignInForm=true;
@@ -25,7 +27,7 @@ export class UserLoginComponent {
     this.signInForm=this.fb.group({
       password : [],
       confirmPassword : [],
-      name : ['',[this.nameValidation]]
+      name : ['',[this.nameValidation, this.storeDataService.whiteSpaceValidator]]
     })
   }
 
@@ -36,6 +38,7 @@ export class UserLoginComponent {
     return isErr ? {Err : true} : null;
     
   }
+  
 
   password(){       
     this.passwordValue=this.signInForm.value.password;
@@ -55,6 +58,10 @@ export class UserLoginComponent {
     else{
       this.isMatch=false;
     }
+  }
+  
+  showpass(){
+    this.showPassword=!this.showPassword
   }
 
 }

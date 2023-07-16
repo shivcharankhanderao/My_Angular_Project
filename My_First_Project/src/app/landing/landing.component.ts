@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { StoreDataService } from '../store-data.service';
 
 @Component({
   selector: 'app-landing',
@@ -7,8 +8,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./landing.component.css']
 })
 export class LandingComponent {
-  constructor(private router: Router) {
+  fullName : any;
+  // stringified JSON
+  jsonData= {
 
+    "admin": [
+      {
+        name : "om",
+        age : 23,
+        mob : 9876989898
+      }
+  ],
+  "statusCode" : 32,
+  
+  }
+
+
+  constructor(private router: Router, private storeDataService: StoreDataService) {
+
+  }
+
+  ngOnInit(){
+    this.fullName= this.storeDataService.userFullName
   }
   loginButton() {
     this.router.navigateByUrl('/login');
