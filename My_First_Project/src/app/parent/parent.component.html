@@ -1,0 +1,14 @@
+<p>parent works!</p>
+<h3>Testing Parent</h3>
+<button (click)="set()">Set data</button><br>
+---------------------------------------------- <br>
+<input type="text" [(ngModel)]="parentData">
+{{parentData}}
+
+
+<app-child [dataFromParent]="parentData"></app-child>
+
+
+<br><br><br>
+----------------------------------------------
+<app-user-demo></app-user-demo>

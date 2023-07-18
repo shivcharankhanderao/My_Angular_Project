@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class StoreDataService {
   userFullName : any;
+  setParentData: any;
 
   constructor() { }
 

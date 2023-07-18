@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup,FormBuilder, Validators } from '@angular/forms';
 import { StoreDataService } from '../store-data.service';
 import { Router } from '@angular/router';
+import { UserDataService } from '../user/user-data.service';
 
 @Component({
   selector: 'app-signup',
@@ -12,14 +13,21 @@ export class SignupComponent {
   signUpForm! : FormGroup;
   // name : string : 'shiv';
   // name : string;
+  data : any;
 
   constructor( private formbuilder : FormBuilder, private storeDataService : StoreDataService,
-    private router : Router){
+    private router : Router, private userDataService : UserDataService){
 
   }
 
   ngOnInit(){
     this.signUpFormControlls()
+    this.data=this.userDataService.jData
+    console.log('this.data>>', this.data);
+
+    
+    
+
   }
   signUpFormControlls(){
     this.signUpForm = this.formbuilder.group({

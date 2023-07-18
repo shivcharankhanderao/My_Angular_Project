@@ -3,13 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { HomeComponent } from './home/home.component';
 import { PathNotFoundComponent } from './path-not-found/path-not-found.component';
 import { LandingComponent } from './landing/landing.component';
 import { DirectiveInAngularComponent } from './directive-in-angular/directive-in-angular.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,13 +22,16 @@ import { DirectiveInAngularComponent } from './directive-in-angular/directive-in
     HomeComponent,
     PathNotFoundComponent,
     LandingComponent,
-    DirectiveInAngularComponent
+    DirectiveInAngularComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
-    ReactiveFormsModule
+    // FormsModule,
+    // ReactiveFormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
