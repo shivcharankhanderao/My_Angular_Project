@@ -1,0 +1,44 @@
+
+<button class="back-btn" mat-raised-button color="primary" (click)="back()">Back</button>
+<br>
+
+<mat-card>
+    <mat-card-content>
+        <form [formGroup]="signUpForm">
+            <mat-form-field class="lgn-input">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="lgn-input">
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email">
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="lgn-input">
+                <mat-label>Mobile</mat-label>
+                <input matInput formControlName="mobile">
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="lgn-input">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password">
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="lgn-input">
+                <mat-label>Confirm Password</mat-label>
+                <input matInput formControlName="confirmPassword">
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="lgn-input">
+                <mat-label>Gender</mat-label>
+                <input matInput formControlName="gender">
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+</mat-card>
