@@ -1,6 +1,34 @@
 {
   "admin": [],
   "user": [],
-  "owner": [],
-  "hotelDetails":[]
+  "owner": [
+    {
+      "Username": "shivpatil",
+      "Email": "shivpatil123@gmail.com",
+      "Mobile": "677754588",
+      "Password": "12345",
+      "ConfirmPassword": "12345",
+      "Gender": "male",
+      "id": 1
+    },
+    {
+      "Username": "shree",
+      "Email": "shree@gmail.com",
+      "Mobile": "9876546366365",
+      "Password": "55555",
+      "ConfirmPassword": "55555",
+      "Gender": "male",
+      "id": 2
+    },
+    {
+      "Username": "shree",
+      "Email": "shree@gmail.com",
+      "Mobile": "9876546366365",
+      "Password": "55555",
+      "ConfirmPassword": "55555",
+      "Gender": "male",
+      "id": 3
+    }
+  ],
+  "hotelDetails": []
 }

@@ -4,7 +4,7 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    background-color: aqua;
+    background-color: transparent;
 
 }
 .lgn-input{
@@ -14,13 +14,28 @@
     
 }
 .container{
-    background-color: sienna;
+    // background-color: sienna;
+    background-image: url('/assets/images/hotelLogin.jpg');
     height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+nav{
+    background-color: #647518;
+    padding: 4px 16px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 h1{
-    color: blue;
-    font-size: 50px;
-    font-family: fantasy;
+    color: #90b6e9;
+    position: relative;
+    top: 5px;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: initial;
 
 }
