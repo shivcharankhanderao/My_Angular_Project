@@ -14,21 +14,64 @@
     {
       "Username": "shree",
       "Email": "shree@gmail.com",
-      "Mobile": "9876546366365",
+      "Mobile": "9876546365",
       "Password": "55555",
       "ConfirmPassword": "55555",
       "Gender": "male",
       "id": 2
     },
     {
-      "Username": "shree",
+      "Username": "nitin",
       "Email": "shree@gmail.com",
-      "Mobile": "9876546366365",
-      "Password": "55555",
-      "ConfirmPassword": "55555",
+      "Mobile": "9854636636",
+      "Password": "34555",
+      "ConfirmPassword": "34555",
       "Gender": "male",
       "id": 3
+    },
+    {
+      "Username": "ompatil",
+      "Email": "ompatil@123",
+      "Mobile": "9898776655",
+      "Password": "12123",
+      "ConfirmPassword": "12123",
+      "Gender": "male",
+      "id": 4
     }
   ],
-  "hotelDetails": []
+  "hotelDetails": [
+    {
+      "OwnerName": "shivpatil",
+      "OwnerContact": "1234567890",
+      "HotelName": "Shree Hotel",
+      "HotelAddress": "Khamgaon road, shegaon",
+      "HotelContact": "9876543210",
+      "MenuBar": "shegaon kachori",
+      "RoomAvailable": "100",
+      "OwnerPassword": "shivpatil@123",
+      "id": 1
+    },
+    {
+      "OwnerName": "shivpatil",
+      "OwnerContact": "1234567890",
+      "HotelName": "Sai Hotel",
+      "HotelAddress": "Akola road, shegaon",
+      "HotelContact": "9976543210",
+      "MenuBar": "panir",
+      "RoomAvailable": "100",
+      "OwnerPassword": "shivpatil@123",
+      "id": 2
+    },
+    {
+      "OwnerName": "nitin",
+      "OwnerContact": "9797978866",
+      "HotelName": "Ranjeet Hotel",
+      "HotelAddress": "near bus stand, akola",
+      "HotelContact": "9776543266",
+      "MenuBar": "veg",
+      "RoomAvailable": "100",
+      "OwnerPassword": "nitin@123",
+      "id": 3
+    }
+  ]
 }

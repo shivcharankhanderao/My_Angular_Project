@@ -1,1 +1,47 @@
-<p>newhotelregistration works!</p>
+<div class="form-container">
+    <form [formGroup]="hotelRegistrationForm">
+        <mat-form-field class="form-input">
+            <mat-label>Owner Name</mat-label>
+            <input matInput formControlName="ownerName">
+        </mat-form-field>
+        <mat-form-field class="form-input">
+            <mat-label>Owner password</mat-label>
+            <input matInput formControlName="ownerPassword">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-input">
+            <mat-label>Owner Contact</mat-label>
+            <input matInput formControlName="ownerContact">
+        </mat-form-field>
+        <mat-form-field class="form-input">
+            <mat-label>Hotel Name</mat-label>
+            <input matInput formControlName="hotelName">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-input">
+            <mat-label>Hotel Address</mat-label>
+            <input matInput formControlName="hotelAddress">
+        </mat-form-field>
+
+        <mat-form-field class="form-input">
+            <mat-label>Hotel Contact</mat-label>
+            <input matInput formControlName="hotelContact">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="form-input">
+            <mat-label>Menu Bar</mat-label>
+            <input matInput formControlName="menuBar">
+        </mat-form-field>
+        <mat-form-field class="form-input">
+            <mat-label>Room Available</mat-label>
+            <input matInput formControlName="roomAvailable">
+        </mat-form-field>
+        <br><br><br><br>
+
+        <div>
+            <button mat-raised-button color="primary" (click)="hotelDetails()">Submit</button>
+        </div>
+
+
+    </form>
+</div>

@@ -56,9 +56,9 @@ export class OwnersingupComponent {
       this.postResponse = resp;
       
     })
-    if (this.postResponse?.id) {
+    // if (this.postResponse?.id) {
       this.router.navigateByUrl('/owner/ownerSuccess') 
-    }
+    // }
   }
 
 }
