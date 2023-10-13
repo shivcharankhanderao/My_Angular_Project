@@ -8,11 +8,19 @@ import { StoreDataService } from '../store-data.service';
 })
 export class ParentComponent {
   parentData : any;
+  valueFromChild : any;
+
+  
   constructor(private storeDataService : StoreDataService){
 
   }
   set(){
     this.storeDataService.setParentData = "Shiv patil"
+  }
+
+  getData(value : any){
+    console.log('Parent>>', value);
+    this.valueFromChild = value;
   }
 
 }

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { SharedModule } from '../shared/shared.module';
+// import { NumberOnlyDirective } from './number-only.directive';
 // import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { UserDemoComponent } from './user-demo/user-demo.component';
 
@@ -11,6 +12,7 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [
     UserLoginComponent,
+    // NumberOnlyDirective,
     // UserDemoComponent
   ],
   imports: [

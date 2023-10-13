@@ -14,6 +14,7 @@ export class UserLoginComponent {
   confirmPasswordValue : any
   isMatch! : boolean;
   showPassword! : boolean;
+  strongPassword =false;
   
 
   constructor(private fb : FormBuilder, private storeDataService : StoreDataService){}
@@ -47,6 +48,10 @@ export class UserLoginComponent {
     }
     else{
       this.isMatch=false;
+    }
+    let passLength=  this.passwordValue.length;
+    if(passLength > 10){
+      this.strongPassword=true;
     }
   }
 

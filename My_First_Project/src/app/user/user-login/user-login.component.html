@@ -5,7 +5,8 @@
     Password :
     <input [type]="showPassword ? 'text' : 'password'" formControlName="password" (keyup)="password()">
     <button (click)="showpass()">show</button> <br>
-    <span class="err" *ngIf="!isMatch && signInForm.get('password')?.dirty">
+    <span *ngIf="strongPassword">Strong Password</span>
+    <span class="err" *ngIf="!isMatch && signInForm.get('password')?.dirty && !strongPassword">
         Password and confirm password should be same
     </span><br>
     Confirm Password :

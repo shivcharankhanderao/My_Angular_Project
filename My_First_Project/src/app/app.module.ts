@@ -13,6 +13,7 @@ import { DirectiveInAngularComponent } from './directive-in-angular/directive-in
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SharedModule } from './shared/shared.module';
+import { CharOnlyDirective } from './char-only.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SharedModule } from './shared/shared.module';
     LandingComponent,
     DirectiveInAngularComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CharOnlyDirective
   ],
   imports: [
     BrowserModule,
